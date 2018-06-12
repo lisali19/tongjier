@@ -1,0 +1,5 @@
+import requests
+import re
+a=requests.get('http://news.baidu.com/')
+res=re.findall('\w+://\S*',a.text,re.S)
+print(res)
